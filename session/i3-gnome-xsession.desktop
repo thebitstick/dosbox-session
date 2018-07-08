@@ -1,8 +1,7 @@
 # -*- mode: conf -*-
 
 [Desktop Entry]
-Comment=GNOME session management + i3
-Exec=gnome-session --session=i3-gnome
-Name=GNOME + i3
-TryExec=gnome-session
+Comment=DOSBOX session
+Exec=dosbox-session
+Name=dosbox-session
 Type=XSession
