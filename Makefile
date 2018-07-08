@@ -6,10 +6,10 @@ INSTALL = install
 DESTDIR ?= /
 PREFIX  ?= $(DESTDIR)/usr
 
-PATH_I3_GNOME = $(PREFIX)/bin/i3-gnome
-PATH_I3_GNOME_DESKTOP = $(PREFIX)/share/applications/i3-gnome.desktop
-PATH_I3_GNOME_SESSION = $(PREFIX)/share/gnome-session/sessions/i3-gnome.session
-PATH_I3_GNOME_XSESSION = $(PREFIX)/share/xsessions/i3-gnome.desktop
+PATH_DOSBOX = $(PREFIX)/bin/dosbox-session
+PATH_DOSBOX_DESKTOP = $(PREFIX)/share/applications/dosbox-session.desktop
+PATH_DOSBOX_SESSION = $(PREFIX)/share/gnome-session/sessions/dosbox-session.session
+PATH_DOSBOX_XSESSION = $(PREFIX)/share/xsessions/dosbox-xsession.desktop
 
 #
 # Targets
@@ -20,17 +20,17 @@ all:
 
 
 install:
-	$(INSTALL) -m0644 -D session/i3-gnome-xsession.desktop $(PATH_I3_GNOME_XSESSION)
-	$(INSTALL) -m0644 -D session/i3-gnome.desktop $(PATH_I3_GNOME_DESKTOP)
-	$(INSTALL) -m0644 -D session/i3-gnome.session $(PATH_I3_GNOME_SESSION)
-	$(INSTALL) -m0755 -D session/i3-gnome $(PATH_I3_GNOME)
+	$(INSTALL) -m0644 -D session/dosbox-xsession.desktop $(PATH_DOSBOX_XSESSION)
+	$(INSTALL) -m0644 -D session/dosbox-session.desktop $(PATH_DOSBOX_DESKTOP)
+	$(INSTALL) -m0644 -D session/dosbox-session.session $(PATH_DOSBOX_SESSION)
+	$(INSTALL) -m0755 -D session/dosbox-session $(PATH_DOSBOX)
 
 
 uninstall:
-	rm -f $(PATH_I3_GNOME)
-	rm -f $(PATH_I3_GNOME_DESKTOP)
-	rm -f $(PATH_I3_GNOME_SESSION)
-	rm -f $(PATH_I3_GNOME_XSESSION)
+	rm -f $(PATH_DOSBOX)
+	rm -f $(PATH_DOSBOX_DESKTOP)
+	rm -f $(PATH_DOSBOX_SESSION)
+	rm -f $(PATH_DOSBOX_XSESSION)
 
 
 .PHONY: all install uninstall
