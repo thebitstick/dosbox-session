@@ -1,11 +1,10 @@
 # -*- mode: conf -*-
 
 [Desktop Entry]
-Comment=Improved dynamic tiling window manager, registers with gnome session manager.
-Exec=i3-gnome
-Name=i3-gnome
+Comment=X11 Session for DOSBox
+Exec=dosbox-session
+Name=dosbox-session
 Type=Application
 X-GNOME-Autostart-Notify=false
 X-GNOME-Autostart-Phase=WindowManager
 X-GNOME-Provides=windowmanager
-X-GNOME-WMName=i3
